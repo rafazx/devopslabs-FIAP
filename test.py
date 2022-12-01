@@ -3,6 +3,7 @@ from app import app
 import unittest
 
 class Test(unittest.TestCase):
+
     def setUp(self):
         # cria uma instância do unittest, precisa do nome "setUp"
         self.app = app.test_client()
@@ -16,4 +17,4 @@ class Test(unittest.TestCase):
 
     def test_conteudo(self):
         # verifica o retorno do conteudo da pagina
-        self.assertEqual(self.result.data.decode('utf-8'), "Hello World")
+        self.assertEqual(self.result.data.decode('utf-8'), "Devops Cloud")
